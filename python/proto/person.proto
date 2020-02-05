@@ -1,0 +1,24 @@
+syntax = "proto3";
+// main message
+message Person {
+int32 id = 1;
+string name = 2;
+int32 age = 3;
+repeated string languages_known = 4;
+Gender gender = 5;
+Address address = 6;
+}
+// enum type
+enum Gender {
+none = 0;
+Male = 1;
+Female = 2;
+Other = 3;
+}
+// nested message
+message Address {
+string city = 1;
+string state = 2;
+string country = 3;
+int32 pincode = 4;
+}
